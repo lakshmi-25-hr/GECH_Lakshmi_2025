@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex in css</title>
+    <style>
+        *{
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .container{
+            width: 50vw;
+            height: 50vh;
+            border: 2px solid black;
+            display:flex;
+            justify-content: space-between;
+            /* align-items:first baseline; */
+            /* gap: 10px; */
+            /* flex-wrap: wrap; */
+            align-items: center;
+            /* align-content: start; */
+            flex-direction:column-reverse;
+            flex-direction: column;
+            /* flex-direction:row ; */
+
+
+        }
+        body{
+            padding: 30px;
+        }
+        .child{
+            width: 50px;
+            height: 20px;
+            border: 2px solid rgb(240, 18, 18);
+            background-color: aquamarine;
+
+        }
+        .five{
+            align-self: center;
+        }
+        .first{
+            flex-grow: 2;
+        }
+        .sec{
+            flex-shrink: 5;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex in Css</h1><br>
+    <div class="container">
+      <div class="child first">1</div>
+      <div class="child sec">2</div>
+      <div class="child thi">3</div>
+      <div class="child four">4</div>
+      <div class="child five">5</div>
+      <div class="child six">6</div>
+      <div class="child seven">7</div>
+      <div class="child eight">8</div>
+      <div class="child nine">9</div>
+      <div class="child ten">10</div>
+      <div class="child eleven">11</div>
+      <div class="child twelve">12</div>
+      <div class="child thirte">13</div>
+      <div class="child fourten">14</div>
+      <div class="child fifteen">15</div>
+      <div class="child first">16</div>
+      <div class="child sevteen">17</div>
+      <div class="child eighteen">18</div>
+      <div class="child nineteen">19</div>
+      <div class="child five">20</div>
+     </div>
+</body>
+</html>

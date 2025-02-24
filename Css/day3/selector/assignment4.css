@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-card {
+    background: #fff;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.header h2 {
+    font-size: 16px;
+    color: #555;
+    font-weight: normal;
+}
+
+.contact-info p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #444;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.about h3, .skills h3, .education h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.about p, .education p {
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.skill-tags span {
+    background: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}

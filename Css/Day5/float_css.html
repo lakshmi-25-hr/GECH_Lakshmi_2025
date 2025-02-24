@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float in Css</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            padding: 20px;
+
+        }
+        .child{
+            border: 2px solid aqua;
+        }
+        .container img{
+            float: left;
+        }
+        .sec{
+            /* clear: both; */
+            clear: left;
+        }
+    </style> 
+</head>
+
+<body>
+    <div class="container">
+        <img src="nature.jpg" alt="image" width="100px">
+        
+            <div class="child first">Lorem ipsum dolor sit amet.</div>
+            <div class="child sec">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sequi quibusdam perspiciatis
+                necessitatibus ducimus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sequi quibusdam perspiciatis
+                necessitatibus ducimus.</div>
+            
+            
+    </div>
+</body>
+
+</html>

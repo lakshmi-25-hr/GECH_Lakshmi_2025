@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables_css</title>
+    <style>
+        body{
+            padding: 20px;
+        }.table_con{
+            width: 80vw;
+            height: 50vw;
+        }
+         .table_con,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(2n){
+            background-color: antiquewhite;
+        }
+        tr:nth-child(2n+1){
+            background-color: rgb(199, 160, 170);
+        }
+        tr:first-child{
+            background-color: green;
+            color: #fff;
+        }
+        th,td{
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <table class="table_con">
+        <tr>
+            <th>Name</th>
+            <th>Roll</th>
+            <th>Age</th>
+            <th>address</th>
+        </tr>
+        <tr>
+            <td>lakshmi</td>
+            <td>19</td>
+            <td>21</th>
+            <td>sira</td>
+        </tr>
+        <tr>
+            <td>sinchu</td>
+            <td>20</td>
+            <td>23</th>
+            <td>tmk</td>
+        </tr>
+        <tr>
+            <td>priya</td>
+            <td>18</td>
+            <td>24</th>
+            <td>mysore</td>
+        </tr>
+        <tr>
+            <td>pooja</td>
+            <td>15</td>
+            <td>24</th>
+            <td>hassan</td>
+        </tr>
+        
+
+    </table>
+</body>
+</html>
