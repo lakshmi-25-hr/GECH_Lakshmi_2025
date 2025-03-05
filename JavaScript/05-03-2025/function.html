@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <h1>3 ways to declare a Function</h1>
+    <p>1. function Declaration</p>
+    <p>2.function expression</p>
+    <p>3. arrow function </p>
+
+    <p>Syntax:
+    <pre>function function_name(para){
+    //code
+    } </pre>
+    </p>
+
+
+    <h2>4 types of function</h2>
+    <p>1.function accepting the parameter and not returning value</p>
+    <p>1.function accepting the parameter and returning value</p>
+    <p>1.function not accepting the parameter and not returning value</p>
+    <p>1.function not accepting the parameter and returning value</p>
+
+    <script>
+        // function declaration
+        function display() {
+            console.log("This is display function");
+        }
+
+        //    function call
+        // display();  // dry-don't repeat yourself
+
+
+        // <p>1.function accepting the parameter and not returning value</p>
+        //   function para_not_return(){
+        //       console.log("function accepting the parameter and not returning value");
+        //      }
+
+        // 1.
+        function para_not_return(number) { //parameter
+            console.log(`the given number is ${number}`);
+        }
+        para_not_return(23); //argument
+
+        //2.
+        function para_return(number) {
+            return number;
+
+        }
+        const res = para_return(335);
+        console.log(`the result is ${res}`);
+
+        //3.
+        function not_para_not_return(number) {
+            return number;
+
+        }
+        not_para_not_return();
+
+        //  4.
+        function not_para_return() {
+            return;
+        }
+        not_para_return();
+
+        // odd and even
+        function is_even(num) {
+
+            if (num % 2 == 0) {
+                console.log("The number is", num, "is even");
+            }
+            else {
+                console.log("The number is", num, "is odd");
+            }
+            return num;
+        }
+        is_even(13);
+
+
+
+        function iseven(num) {
+            return num % 2 === 0;
+        }
+        const res3 = iseven(31);
+        if (res3 === true) {
+            console.log("even number");
+        }
+        else {
+            console.log("odd number");
+        }
+ </script>
+
+ <script>
+    //arrow function
+    const display2= () =>{
+          console.log("this is display arrow function");
+    }
+    display2();
+ </script>
+</body>
+
+</html>
