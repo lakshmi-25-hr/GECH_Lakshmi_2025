@@ -101,6 +101,27 @@
           console.log("this is display arrow function");
     }
     display2();
+
+    
+// 1. Function accepting a parameter and not returning a value
+const paraNotReturnArrow = (num) => {
+    console.log(`The given number is ${num}`);
+};
+paraNotReturnArrow(20);
+
+// 2. Function accepting a parameter and returning a value
+const paraReturnArrow = (num) => num * 3;
+console.log(`The result is ${paraReturnArrow(7)}`);
+
+// 3. Function not accepting a parameter and not returning a value
+const notParaNotReturnArrow = () => {
+    console.log("This arrow function has no parameters and no return value.");
+};
+notParaNotReturnArrow();
+
+// 4. Function not accepting a parameter but returning a value
+const notParaReturnArrow = () => "Hello, this is an arrow function returning a value!";
+console.log(notParaReturnArrow());
  </script>
 </body>
 

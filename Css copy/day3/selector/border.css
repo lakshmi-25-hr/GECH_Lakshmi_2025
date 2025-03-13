@@ -1,0 +1,19 @@
+.first{
+    border: 2px solid black;
+    background-color: burlywood;
+    border-radius: 5px;
+
+}
+
+.sec{
+    background-color: brown;
+
+}
+
+p{
+    background-color: rgb(184, 211, 228);
+    outline: 2px solid black;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <style>
+        :root{
+            --aqua:rgb(55,168,168);
+            --green:rgb(36,113,36);
+        }
+        .ptag{
+            background-color: var(--aqua);
+        }
+        .divtag{
+            background-color: var(--green);
+        }
+        .ptag1{
+            background-color: var(--aqua);
+        }
+        .divtag1{
+            --green:rgb(190, 75, 138);
+            background-color: var(--green);
+        }
+        .container{
+            margin: 20px solid;
+            border: 2px solid red;
+            width: 50vw;
+        }
+        .child{
+            border: 2px solid black;
+            width: 60%;
+            
+        }
+        .first{
+            background-color: bisque;
+            z-index: 1;
+            position: relative;
+        }
+        .sec{
+            background-color: azure;
+            position: absolute;
+            top: 10px;
+            left:100px;
+            margin-top: 10px;
+            z-index: 5;
+        }
+  
+    </style>
+</head>
+<body>
+    <p class="ptag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aspernatur voluptat.</p>
+    <div class="divtag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aspernatur voluptat.</div>
+    <p class="ptag1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aspernatur voluptat.</p>
+    <div class="divtag1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aspernatur voluptat.</div>
+
+    <div class="container">
+        <div class="child first"></div>
+        <div class="child second"></div>
+    </div>
+</body>
+</html>

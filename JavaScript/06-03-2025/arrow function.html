@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions</title>
+    <style>
+      table,th,td{
+        border:1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+    <table border="1" id="table_body">
+        <thead</thead>
+        <tr>
+            <th>1.firstName</th>
+            <th>2.Age</th>
+            <th>3.Address</th>
+        </tr>
+    </thead>
+    </table>
+
+    <script>
+        const iseven=(num) => num %2==0;
+         
+        const res=iseven(4);
+        console.log(res);
+    </script>
+
+    <script>
+         let users = [
+            { firstName: "Swathi", age: 21, address: "Hassan" },
+            { firstName: "Pavan", age: 25, address: "Bangalore" },
+            { firstName: "Raj", age: 30, address: "Mysore" },
+            { firstName: "Sneha", age: 28, address: "Udupi" },
+            { firstName: "Kiran", age: 23, address: "Tumkur" },
+            { firstName: "Deepak", age: 26, address: "Davangere" },
+            { firstName: "Asha", age: 24, address: "Shimoga" },
+            { firstName: "Vikas", age: 29, address: "Chitradurga" },
+            { firstName: "Megha", age: 27, address: "Mangalore" },
+            { firstName: "Arun", age: 22, address: "Hubli" }
+    ]
+
+    
+
+    let content = "";
+    for(let item of users){
+        content += `<tr>
+         <td> ${item.firstName}</td>
+        <td> ${item.age}</td>
+        <td> ${item.address}</td>
+       </tr>`
+    }
+
+    console.log(content);
+    document.getElementById("table_body").innerHTML=content;
+    </script>
+</body>
+</html>

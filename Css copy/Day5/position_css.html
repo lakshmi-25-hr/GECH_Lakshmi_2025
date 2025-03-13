@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            margin: 30px 100px;
+            position: relative;
+            border: 2px solid;
+        }
+        .div{
+            width: 30vw;
+            height: 50px;
+            border: 2px solid black;
+
+        }
+        .first{
+            background-color: blanchedalmond;
+            position: relative;
+            top: 100px;
+            left: 200px;
+        }
+        .sec{
+            background-color: blueviolet;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        } 
+        .third{
+            background-color: rgb(217, 241, 81);
+            position: fixed;
+            top: 0;
+            bottom:0;
+        }
+        .four{
+            background-color: rgb(194, 80, 170);
+            position: sticky;
+            top: 0;
+        
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div first">1</div>
+        <div class="div sec">2</div>
+        <div class="div third">3</div>
+        <div class="div four">4</div>
+    </div>
+</body>
+</html>

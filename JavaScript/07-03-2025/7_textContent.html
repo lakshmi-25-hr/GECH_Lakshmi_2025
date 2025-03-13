@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Text content</h1>
+    <p class="ptag">lorem ipsum <span style="display: none;">adipisicing vjgjh hkjhkuhiu</span></p>
+
+    <script>
+        const ptag = document.querySelector(".ptag");
+        console.log(ptag.innerText);//display none will apply
+        console.log(ptag.textContent);//display none will not apply
+        // ptag.innerText=  "Hello";
+        // ptag.textContent="Hello";
+    </script>
+</body>
+</html>

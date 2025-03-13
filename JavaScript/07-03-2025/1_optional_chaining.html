@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>optional chaining</title>
+</head>
+<body>
+    <h1>Optional chaining</h1>
+    <p>syntx : ?.</p>
+
+    <script>
+        const obj1={
+            firstName : "Lakshmi H R",
+            age :21,
+            address:{
+                country:"India",
+                state : "Karnataka",
+                city : "Hassan"
+            },
+        };
+         console.log(obj1);
+         console.log(obj1?.address1?.country);//to avoid the error we use ? symbol
+         console.log(obj1?.address?.country);
+
+         const Adventure={
+            name:"Alice",
+            cat:{
+                name:"Dinah",
+            },
+         };
+         console.log(Adventure);
+         console.log(Adventure.cat1);
+         console.log(Adventure?.cat1?.color);
+         
+    </script>
+</body>
+</html>
