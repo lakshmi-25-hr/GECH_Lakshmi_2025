@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "std_crd",
+    "Emp_crud",
+  
 ]
 
 MIDDLEWARE = [
@@ -50,12 +51,13 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+
 ROOT_URLCONF = "gec_crud.urls"
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ["C:/Users/LAKSHMI H R/Desktop/GECH_Lakshmi_2025/Django/gec_crud/Emp_crud/templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

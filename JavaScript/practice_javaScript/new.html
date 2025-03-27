@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h3 id="demo">Hii world</h3> 
+  <button id="demo1" onclick="handle()">this is button</button> 
+  <script>
+    const buttons=document.getElementById("demo1");
+    buttons.addEventListener("click",()=>{
+        document.getElementById('demo').style.color='red';
+    })
+  </script>
+</body>
+</html>

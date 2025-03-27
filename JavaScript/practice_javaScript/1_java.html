@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">this is Hello</p>
+    <!-- <button onclick="document.getElementById('demo').innerText='World'">Click Me</button> -->
+   <button onclick="Handle()">Click Me</button>
+
+   <script>
+    function Handle(){
+        document.getElementById('demo').innerText="Hello JS";
+    }
+   </script>
+
+   <p id="demo2">Heloo JSsssssss</p>
+   <button onclick="document.getElementById('demo2').style.color='red'">Click ME</button>
+
+   <p id="demo3">Lakshmi</p>
+   <button onclick="document.getElementById('demo3').style.display='none'">click Me</button><br>
+
+
+   <br>
+   <p id="demo4" style="display: none;">hello</p>
+   <button onclick="document.getElementById('demo4').style.display='block'">jchslfkdsiugoiw</button>
+
+
+   <script>
+    //1,Number
+    let a=12;
+    console.log("Value of a:",a);
+    console.log("value of a:",typeof a);
+
+    //2.String
+    let b="Hello";
+    console.log("value of b:",b);
+    console.log("value of b:",typeof b);
+
+    //3.Undefined
+    let c;
+    console.log("value of c :",c);
+    console.log("value of c :",typeof c);
+
+    //4.null
+    let d =null;
+    console.log("value of d :",d);
+    console.log("value of d:",typeof d);
+
+    //5.bigint
+    let e=121n;
+    console.log("value of e :",e);
+    console.log("value of e :",typeof e);
+
+    //6.object
+    let  obj=[1,2,3,4,5];
+    console.log("the value of obj is :",obj);
+    console.log("value of obj :",typeof obj);
+
+   </script>
+   
+
+   <p id="lux"></p>
+   <button onclick="Handle()">Click Me</button>
+
+   <script>
+    function Handle(){
+       // document.getElementById('lux').innerHTML='<span>Hello bjhk</span>';
+       // document.getElementById('lux').innerText="Heloo innerhtml";
+        //document.write("User clicked the button");
+        
+    }
+</script>
+
+<script>
+    //1.parseInt
+let k="121";
+console.log("The value of :",typeof k);
+let l=parseInt(k);
+console.log("the value of :",typeof l);
+
+
+</script>
+</body>
+</html>
