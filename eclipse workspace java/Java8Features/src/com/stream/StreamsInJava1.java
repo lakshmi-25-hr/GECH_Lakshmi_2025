@@ -18,14 +18,7 @@ public class StreamsInJava1 {
 		//Long res1=stream.count(); // only one time we can perform termination operation
 		//System.out.println(res1);
 	
-		
-		
-		
-		
-		
-		
-		
-		
+			
 	}
 
 }
