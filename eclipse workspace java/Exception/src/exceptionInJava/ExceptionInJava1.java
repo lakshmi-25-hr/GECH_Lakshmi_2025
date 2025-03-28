@@ -7,13 +7,13 @@ public class ExceptionInJava1 {
 		 */
 		int a=10;
 		int b=0;
-		try {
+		try{
 			System.out.println("Result is"+(a/b));
 		} catch (ArithmeticException e) {
-		System.out.println(e);
-		System.out.println(e.getMessage());
-		e.printStackTrace();
-	}
+			System.out.println(e);
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
 		System.out.println("Hello World");
 	}
 	

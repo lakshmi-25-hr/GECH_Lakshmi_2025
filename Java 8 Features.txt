@@ -1,0 +1,105 @@
+Java 8 Features:
+
+1.lamda expressions
+2.functional interface
+3.predicate
+4.comsumer
+5.supplier
+6.Function
+7.stream API
+
+
+lambda expressions:
+1.it also called anonymous function (without name).
+2.there is return type.
+3.there is no access modifiers.
+
+
+1.public int add(int a, int b){
+return a=b;
+}
+
+examples
+
+(int a, int b)->{return a=b;}
+
+2.public String findLength(String s){
+return s.lenght();
+
+}
+=====================
+
+(String s)->{ return s.lenght() }
+
+3.public void print(){
+syso("Hello World");
+}
+================
+
+()->{syso("Hello World");}
+
+
+Imported points.
+====================
+
+1.no need to specify the type of the data 
+(a,b)->{
+return a+b;
+}
+
+2.if the statement is simple line then not require of {} and return
+  (s)->s.length();
+
+3.if you are passing the single parameter then no need to ()
+  s->s.length()
+
+4.if their is no parameter then () is must.
+()->{syso("Hello World")}
+
+5.if there is a multiple parameter then it need to separate by,
+(a,b)->a+b
+
+
+
+
+
+Collection:
+===========
+* to represent a group of individual objects as a single entity then we should go for collection
+
+streams:
+==========
+* to work with multiple objects or collections then we should go for streams
+
+1.source:
+================
+* on which you are applying the stream
+
+2.intermediate operation:
+==========
+the operation will return a another  stream
+
+3.termination operation
+==================
+* the operation terminates the stream
+* After applying the termination operation on stream we cannot reuse it
+* for each stream we can use only one termination operation
+
+example:
+==============
+
+List<Integer> list=new ArrayList<>();
+list.add(13);
+list.add(130);
+list.add(103);
+list.stream().filter(x->x%2==0).count();
+
+
+
+here                 source : list
+     intermediate operation :filter
+     termination operation :count;
+
+
+
+

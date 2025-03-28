@@ -37,6 +37,7 @@ public class ExceptionInJava {
 	//	.checked exception
 	//	1.try catch
 //		2.throw
+		
 	try {
  PrintWriter printWriter=new PrintWriter("abc.txt");
  printWriter.println("hello world");

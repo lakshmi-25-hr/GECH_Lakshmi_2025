@@ -1,0 +1,13 @@
+Registration form :
+===================
+1.name-text
+2.age-number
+3.email-email
+4.phone-number
+5.password-password
+6.date of birth-date
+7.city-select
+8.gender-radio
+9.skills-check box
+10.address-text-area
+11.submit-button

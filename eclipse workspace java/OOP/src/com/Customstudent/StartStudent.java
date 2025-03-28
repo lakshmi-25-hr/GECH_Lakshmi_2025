@@ -25,6 +25,7 @@ public class StartStudent {
 		Collections.sort(student,(s1,s2)->s2.getRoll_num()-s1.getRoll_num());
 		System.out.println("After");
 		System.out.println(student);
+       	 student.stream().filter((s)->s.getAge()>60);
 		
 
 	}

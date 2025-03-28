@@ -39,7 +39,7 @@ public class StringInJava {
 		
 		String str5 = new String ("String5");
 		//str5.concat("hello); not applicable because string is immutable but we can reassign
-		//we cannot chnage the value of the string but we can re assign
+		//we cannot change the value of the string but we can re assign
 		str5=str5.concat("hello"); //we can reassign
 		System.out.println(str5);
 	}
