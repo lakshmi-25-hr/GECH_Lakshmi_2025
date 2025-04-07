@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<h1>welcome to first web app.</h1>
+   <h2> List of Students</h2>
+   <a th:href="@{/add-student}">Add Students </a>
+	<div th:if="${success}">
+		<p th:text="${success}"></p>
+		</div>
+   <table border="1" style="border-collapse:collapse;">
+   <tr>
+   <th>Id</th>
+   <th>Name</th>
+   <th>Image</th>
+   <th>Age</th>
+   <th>Email</th>
+   <th>Password</th>
+   <th>Action</th>
+   </tr>
+   <tr th:each="student:${students}">
+   <td th:text="${student.id}"></td>
+   <td th:text="${student.name}"></td>
+   <td>
+    <img alt="image" width="100px" height="100px" th:src="@{'images/'+${student.imagePath}}">
+   <td th:text="${student.age}"></td>
+   <td th:text="${student.email}"></td>
+   <td th:text="${student.password}"></td>
+   <td>
+	<a th:href="@{/std-edit(id=${student.id})}">Edit</a>
+	<a th:href="@{/std-delete(id=${student.id})}">Delete</a>
+	</td>
+	
+   </tr>
+   </table>
 </body>
 </html>

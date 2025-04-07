@@ -5,7 +5,7 @@ public class StringInJava {
 		/*
 		 * String:
 		 * =============
-		 * it is a group of vcharacters
+		 * it is a group of characters
 		 * 
 		 * ex: table
 		 * need to enclose within ""
@@ -13,7 +13,7 @@ public class StringInJava {
 		 * how to declare the string
 		 * ==========================
 		 * 1.using string literal
-		 * string var_name="stting_name"
+		 * string var_name="string_name"
 		 * 
 		 * 2.using new keyword
 		 * String var_name= new String("string_name");

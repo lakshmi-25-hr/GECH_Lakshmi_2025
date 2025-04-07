@@ -13,7 +13,7 @@ package com.FormValidation.FormValidation.models;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="std_id")
-		private long id;//id
+		private Long id;//id
 	@Column(name="std_name")
 		private String name;
 	@Column(name="std_age")
@@ -22,22 +22,26 @@ package com.FormValidation.FormValidation.models;
 	private String email;
 	@Column(name="std_password")
 	private String password;
+	private String imagePath;
 	
 	public Student() {
 		super();
 	}
-	public Student(long id, String name, int age, String email, String password) {
+	
+	public Student(Long id, String name, int age, String email, String password, String imagePath) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.email = email;
 		this.password = password;
+		this.imagePath = imagePath;
 	}
+
 	public long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -63,6 +67,14 @@ package com.FormValidation.FormValidation.models;
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getImagePath() {
+		return imagePath;
+	}
+
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
 	}
 				
 	}

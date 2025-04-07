@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <h1>Edit Student</h1>
+    
+    <form th:action="@{/edit-student(id=${student.id})}" enctype="multipart/form-data"  method="post" th:object="${studentDTO}" novalidate>
+         
+           <label for="name">Name:</label>
+           <input type="text" th:field="*{name}" name="name" id="name" placeholder="Enter your name" ><br>
+		   <p th:if="${#fields.hasErrors('name')}"th:errors="*{name}"></p>
+           <label for="age">Age:</label>
+           <input type="number" th:field="*{age}" name="age" id="age" placeholder="Enter your age"><br>
+		   <p th:if="${#fields.hasErrors('age')}"th:errors="*{age}"></p>
+           <label for="email">Email:</label>
+           <input type="text" th:field="*{email}" name="email" id="email" placeholder="Enter ur Email" value="abc@gmail.com" ><br>
+		   <p th:if="${#fields.hasErrors('email')}"th:errors="*{email}"></p>
+           <label for="password">Password:</label>
+           <input type="password" th:field="*{password}"  id="password" placeholder="Enter your Password" ><br>
+		   <p th:if="${#fields.hasErrors('password')}"th:errors="*{password}"></p>
+          
+		   <label for="password">Image:</label>
+		   <img alt="image" width="100px" height="100px" th:src="@{'images/'+${student.imagePath}}"><br>
+		   <input type="file" id="password" th:field="*{image}"><br> 
+		     <p th:if="${#fields.hasErrors('image')}"th:errors="*{image}"></p>
+		   
+           <input type="submit" value="Edit Student">
+        </form>
+</body>
+</html>

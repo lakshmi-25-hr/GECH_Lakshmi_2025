@@ -96,7 +96,7 @@ public class ControlStatemet {
 			System.out.println("AVERAGE");
 		}
 		default :{
-			System.out.println("KKEP IT UP");
+			System.out.println("KEEP IT UP");
 		}
 		}
 	}
