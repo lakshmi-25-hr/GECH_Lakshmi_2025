@@ -1,0 +1,89 @@
+Updated Lawyer Appointments Status Handling Code:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lawyer Appointments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .status-btn {
+            margin: 5px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            border: none;
+            color: white;
+        }
+
+        .confirmed {
+            background-color: #28a745;
+        }
+
+        .pending {
+            background-color: #ffc107;
+        }
+
+        .cancelled {
+            background-color: #dc3545;
+        }
+
+        .rescheduled {
+            background-color: #0dcaf0;
+        }
+
+        .inactive {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2>Appointments</h2>
+
+        <!-- Appointment Card -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5>Client Name: John Doe</h5>
+                <p>Case Title: Property Dispute</p>
+                <p>Date: 2025-05-02 | Time: 10:00 AM</p>
+
+                <!-- Status Buttons -->
+                <div id="status-buttons" class="d-flex flex-wrap">
+                    <button class="status-btn inactive" onclick="updateStatus(this, 'confirmed')">Confirmed</button>
+                    <button class="status-btn inactive" onclick="updateStatus(this, 'pending')">Pending</button>
+                    <button class="status-btn inactive" onclick="updateStatus(this, 'cancelled')">Cancelled</button>
+                    <button class="status-btn inactive" onclick="updateStatus(this, 'rescheduled')">Reschedule</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function updateStatus(clickedButton, status) {
+            // Get all buttons inside the same card
+            const buttons = clickedButton.parentElement.querySelectorAll('.status-btn');
+
+            // Remove active color from all
+            buttons.forEach(btn => {
+                btn.classList.remove('confirmed', 'pending', 'cancelled', 'rescheduled');
+                btn.classList.add('inactive');
+            });
+
+            // Activate the clicked one
+            clickedButton.classList.remove('inactive');
+            clickedButton.classList.add(status);
+
+            // Here you can also trigger backend API to send update to client side!
+            console.log(`Appointment status updated to: ${status}`);
+        }
+    </script>
+
+</body>
+
+</html>

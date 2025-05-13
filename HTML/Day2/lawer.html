@@ -1,0 +1,77 @@
+export default function LawyerClientWireframe() {
+    return (
+      <div className="p-6 space-y-8 bg-gray-100 min-h-screen">
+        {/* Top Navigation */}
+        <header className="flex justify-between items-center bg-white p-4 rounded-2xl shadow">
+          <h1 className="text-2xl font-bold">Lawyer-Client System</h1>
+          <nav className="space-x-4">
+            <a href="#" className="text-blue-600">Home</a>
+            <a href="#" className="text-blue-600">About</a>
+            <a href="#" className="text-blue-600">Contact</a>
+            <a href="#" className="text-blue-600">Login</a>
+            <a href="#" className="text-blue-600">Register</a>
+          </nav>
+        </header>
+  
+        {/* Login Section */}
+        <section className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white p-4 rounded-2xl shadow">
+            <h2 className="text-xl font-semibold mb-2">Lawyer Login</h2>
+            <input type="email" placeholder="Email" className="w-full p-2 border rounded mb-2" />
+            <input type="password" placeholder="Password" className="w-full p-2 border rounded mb-2" />
+            <button className="bg-blue-600 text-white px-4 py-2 rounded">Login</button>
+          </div>
+          <div className="bg-white p-4 rounded-2xl shadow">
+            <h2 className="text-xl font-semibold mb-2">Client Login / Register</h2>
+            <input type="email" placeholder="Email" className="w-full p-2 border rounded mb-2" />
+            <input type="password" placeholder="Password" className="w-full p-2 border rounded mb-2" />
+            <button className="bg-green-600 text-white px-4 py-2 rounded mr-2">Login</button>
+            <button className="bg-gray-600 text-white px-4 py-2 rounded">Register</button>
+          </div>
+        </section>
+  
+        {/* Dashboard Preview */}
+        <section className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white p-4 rounded-2xl shadow">
+            <h2 className="text-xl font-bold mb-4">Lawyer Dashboard</h2>
+            <ul className="list-disc pl-6 text-gray-700">
+              <li>View Clients and Cases</li>
+              <li>Manage Appointments</li>
+              <li>Upload/View Documents</li>
+              <li>Send Notifications</li>
+            </ul>
+          </div>
+  
+          <div className="bg-white p-4 rounded-2xl shadow">
+            <h2 className="text-xl font-bold mb-4">Client Dashboard</h2>
+            <ul className="list-disc pl-6 text-gray-700">
+              <li>Submit New Case</li>
+              <li>Upload/View Documents</li>
+              <li>View Appointments</li>
+              <li>Receive Updates</li>
+            </ul>
+          </div>
+        </section>
+  
+        {/* Calendar and Documents */}
+        <section className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white p-4 rounded-2xl shadow">
+            <h3 className="text-lg font-semibold mb-2">Appointment Scheduler</h3>
+            <p>Interactive calendar for booking and viewing meetings.</p>
+          </div>
+  
+          <div className="bg-white p-4 rounded-2xl shadow">
+            <h3 className="text-lg font-semibold mb-2">Document Center</h3>
+            <p>Upload and manage client documents with access control.</p>
+          </div>
+        </section>
+  
+        {/* Notifications */}
+        <section className="bg-white p-4 rounded-2xl shadow">
+          <h3 className="text-lg font-semibold mb-2">Notification Center</h3>
+          <p>Receive alerts for appointments, case updates, and document actions.</p>
+        </section>
+      </div>
+    );
+  }
+  

@@ -18,17 +18,19 @@ package com.FormValidation.FormValidation.models;
 		private String name;
 	@Column(name="std_age")
 	private int age;
-	@Column(name="std_email")
+	
+	@Column(unique=true)
 	private String email;
 	@Column(name="std_password")
 	private String password;
 	private String imagePath;
+	private String documentPath;
 	
 	public Student() {
 		super();
 	}
 	
-	public Student(Long id, String name, int age, String email, String password, String imagePath) {
+	public Student(Long id, String name, int age, String email, String password, String imagePath ,String documentPath) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -36,6 +38,7 @@ package com.FormValidation.FormValidation.models;
 		this.email = email;
 		this.password = password;
 		this.imagePath = imagePath;
+		this.documentPath=documentPath;
 	}
 
 	public long getId() {
@@ -76,5 +79,13 @@ package com.FormValidation.FormValidation.models;
 	public void setImagePath(String imagePath) {
 		this.imagePath = imagePath;
 	}
-				
+
+	public String getDocumentPath() {
+		return documentPath;
+	}
+
+	public void setDocumentPath(String documentPath) {
+		this.documentPath = documentPath;
+	}
+	
 	}

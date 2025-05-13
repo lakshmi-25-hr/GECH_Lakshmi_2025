@@ -22,7 +22,14 @@ public class StudentDTO {
 	private String password;
 	
 	private MultipartFile image;
+	private MultipartFile document;
 	
+	public MultipartFile getDocument() {
+		return document;
+	}
+	public void setDocument(MultipartFile document) {
+		this.document = document;
+	}
 	public String getName() {
 		return name;
 	}

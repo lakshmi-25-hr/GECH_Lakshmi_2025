@@ -66,12 +66,38 @@ import com.FormValidation.FormValidation.repository.StudentRepository;
 				// TODO: handle exception
 			}
 
+			MultipartFile document = studentDTO.getDocument();
+			Date createdAt1 = new Date();
+			String storeDocumentName = createdAt1.getTime()+"_"+document.getOriginalFilename();
+			System.out.println(storeDocumentName );
+			try {
+				String uploadDir1 = "public/documents/";
+				Path uploadpath = Paths.get(uploadDir1);
+				if(!Files.exists(uploadpath)) {
+					Files.createDirectories(uploadpath);
+				}
+				
+				try {
+					InputStream inputStream = document.getInputStream();
+					Files.copy(inputStream, Paths.get(uploadDir1+storeDocumentName), StandardCopyOption.REPLACE_EXISTING);
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+					// TODO: handle exception
+				}
+				
+				
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+				// TODO: handle exception
+			}
+
 			Student student=new Student();
 			student.setName(studentDTO.getName());
 			student.setAge(studentDTO.getAge());
 			student.setEmail(studentDTO.getEmail());
 			student.setPassword(studentDTO.getPassword());
 			student.setImagePath(storeImageName);
+			student.setDocumentPath(storeDocumentName);
 			
 			studentRepository.save(student);
 			
@@ -90,6 +116,15 @@ import com.FormValidation.FormValidation.repository.StudentRepository;
 				// TODO: handle exception
 			}
 			
+			String uploadDir1="public/documents/";
+			Path documentPath = Paths.get(uploadDir1);
+			
+			try {
+				Files.delete(documentPath);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+				// TODO: handle exception
+			}
 			studentRepository.delete(student);
 		}
 		public StudentDTO editStudent(Long id) {
@@ -115,16 +150,39 @@ import com.FormValidation.FormValidation.repository.StudentRepository;
 				MultipartFile image=studentDTO.getImage();
 				Date createAt=new Date();
 				String storeImagename=createAt.getTime()+image.getOriginalFilename();
-				String uploadDir = "public/images/";
+				String uploadDir1 = "public/images/";
 				
 				try {
 					InputStream inputStream = image.getInputStream();
-					Files.copy(inputStream, Paths.get(uploadDir+storeImagename), StandardCopyOption.REPLACE_EXISTING);
+					Files.copy(inputStream, Paths.get(uploadDir1+storeImagename), StandardCopyOption.REPLACE_EXISTING);
 				} catch (Exception e) {
 					System.out.println(e.getMessage());
 					// TODO: handle exception
 				}
 				student.setImagePath(storeImagename);		
+				}
+			
+			if(!studentDTO.getDocument().isEmpty()) {
+				Path oldDocumentPath=Paths.get("public/images/"+student.getDocumentPath());
+				try {
+					Files.delete(oldDocumentPath);
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+					// TODO: handle exception
+				}
+				MultipartFile document=studentDTO.getDocument();
+				Date createAt1=new Date();
+				String storeDocumentname=createAt1.getTime()+document.getOriginalFilename();
+				String uploadDir1 = "public/documents/";
+				
+				try {
+					InputStream inputStream = document.getInputStream();
+					Files.copy(inputStream, Paths.get(uploadDir1+storeDocumentname), StandardCopyOption.REPLACE_EXISTING);
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+					// TODO: handle exception
+				}
+				student.setDocumentPath(storeDocumentname);		
 				}
 			
 			student.setName(studentDTO.getName());

@@ -22,8 +22,11 @@
            <input type="password" th:field="*{password}"  id="password" placeholder="Enter your Password" ><br>
 		   <p th:if="${#fields.hasErrors('password')}"th:errors="*{password}"></p>
 		   <label for="image">Image</label>
-		   		<input type="file" id="image" th:field="*{image}"><br>
-		   		<p th:if="${#fields.hasErrors('image')}" th:errors="*{image}"></p>
+		   <input type="file" id="image" th:field="*{image}"><br>
+		   <p th:if="${#fields.hasErrors('image')}" th:errors="*{image}"></p>
+		   <label for="document">Document</label>
+		   <input type="file" id="document" th:field="*{document}"><br>
+		   <p th:if="${#fields.hasErrors('document')}" th:errors="*{document}"></p>	
 		   	
 		          <input type="submit" value="Add Student">
 		

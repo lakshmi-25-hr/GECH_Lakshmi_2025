@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css variables</title>
+    <style>
+        :root{
+            --green:rgb(10,248,46);
+            --blue:rgb(97,115,249);
+        }
+        .ptag{
+            background-color: var(--blue);
+            color: var(--green);
+        }
+        .divtag{
+            background-color: var(--green);
+            color: var(--blue);
+        }
+    </style>
+</head>
+<body>
+   <p class="ptag">Lorem ipsum</p> 
+   <div class="divtag">Lorem ipsum hgfd</div>
+</body>
+</html>

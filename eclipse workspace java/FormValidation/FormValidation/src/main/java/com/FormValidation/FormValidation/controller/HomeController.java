@@ -48,8 +48,18 @@ public class HomeController {
 	// after filling the form has post it back to database
 	@PostMapping("/add-student")
 	public String Add_student(@Valid @ModelAttribute StudentDTO studentDTO, BindingResult result, Model model ,RedirectAttributes attributes) {
-		if(studentDTO.getImage().isEmpty()) {
-			result.addError(new FieldError("StudentDTo", "image", "Image is required"));
+		Student student=studentRepository.findByEmail(studentDTO.getEmail());
+		if(student!=null ) {
+			result.addError(new FieldError("StudentDTO", "email", "Email is already exists"));
+		}
+		
+		
+     	if(studentDTO.getImage().isEmpty()) {
+			result.addError(new FieldError("StudentDTO", "image", "Image is required"));
+		}
+		
+		if(studentDTO.getDocument().isEmpty()) {
+			result.addError(new FieldError("StudentDTO","document","document is required"));
 		}
 		if (result.hasErrors()) {
 			return "Add_students";
@@ -80,6 +90,10 @@ public class HomeController {
 	@PostMapping("/edit-student")
 	public String updateStudent(@Valid @ModelAttribute StudentDTO studentDTO, BindingResult result,
 			@RequestParam Long id, Model model) {
+		Student student1=studentRepository.findByEmail(studentDTO.getEmail());
+		if(student1!=null && student1.getId()!=id) {
+			result.addError(new FieldError("StudentDTO", "email", "Email is already exists"));
+		}
 		if (result.hasErrors()) {
 			Student student = studentRepository.findById(id).get();
 			model.addAttribute("student", student);

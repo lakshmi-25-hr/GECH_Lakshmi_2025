@@ -1,0 +1,31 @@
+Spring Security:
+================
+*Spring security is all about your authentiaction and authorization.
+
+authentication-who you are?
+authorization-access or roles or permissions.
+we can authentication user in multiple ways:
+===========================================
+1.username and password
+2.JWT(Json web token) token
+3.oAuth2.o authentication -github,google,facebook.
+
+By default, spring security will provide username and password authentication.
+
+1.For rest API spring boot, spring security will provide HTTPBAsicAuthentication.
+
+2.For MVC spring will provide formBasedAuthentication.
+
+*  for these two we will use username and password.
+
+
+
+httpBasicAuthentication:
+=============================
+
+* we can pass username password in auth tab by selecting basic auth
+
+* headers we have to pass by 
+"Basic userename:password" ->in Basic encode
+
+lakshmi:lakshmi@23 ->TGFrc2htaTpMYWtzaG1pQDIz

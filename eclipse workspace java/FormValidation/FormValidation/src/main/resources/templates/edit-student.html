@@ -22,10 +22,15 @@
            <input type="password" th:field="*{password}"  id="password" placeholder="Enter your Password" ><br>
 		   <p th:if="${#fields.hasErrors('password')}"th:errors="*{password}"></p>
           
-		   <label for="password">Image:</label>
+		   <label for="image">Image:</label>
 		   <img alt="image" width="100px" height="100px" th:src="@{'images/'+${student.imagePath}}"><br>
 		   <input type="file" id="password" th:field="*{image}"><br> 
-		     <p th:if="${#fields.hasErrors('image')}"th:errors="*{image}"></p>
+		    <p th:if="${#fields.hasErrors('image')}"th:errors="*{image}"></p>
+			
+			 <label for="image">Document:</label>
+			 <document alt="document" width="100px" height="100px" th:src="@{'document/'+${student.documentPath}}"><br>
+			 <input type="file" id="password" th:field="*{document}"><br> 
+			 <p th:if="${#fields.hasErrors('document')}"th:errors="*{document}"></p> 
 		   
            <input type="submit" value="Edit Student">
         </form>
