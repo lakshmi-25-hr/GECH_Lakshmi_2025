@@ -42,7 +42,7 @@ public class NonPrimitive {
 			
 			
 		System.out.println("Enter a student name:");
-		Scanner sc = new Scanner(System.in);
+		Scanner sc =new Scanner(System.in);
 		String name=sc.nextLine();
 		System.out.println("Name:"+name);
 		

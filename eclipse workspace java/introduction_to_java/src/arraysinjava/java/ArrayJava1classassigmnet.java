@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ArrayJava1classassigmnet {
 	public static void main(String[] args) {
-		
+	
 		
 	Scanner sc= new Scanner(System.in);
 	System.out.println("enter the row and col of array");

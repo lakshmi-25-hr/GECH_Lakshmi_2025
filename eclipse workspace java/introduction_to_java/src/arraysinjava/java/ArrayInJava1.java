@@ -6,7 +6,7 @@ public class ArrayInJava1 {
 		/*
 		 * 2d array
 		 * 
-		 * 
+		 *
 		 * */
 		int [][] arr=new int[2][2];
 		arr[0][0]=10;

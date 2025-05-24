@@ -45,7 +45,7 @@ public class StringMethods {
 		System.out.println(str2.toLowerCase());
 		
 		//7.trim
-		String str3= new String ("              hello world");
+		String str3= new String ("             hello world");
 		System.out.println(str3.trim());
 		
 		//8.strip

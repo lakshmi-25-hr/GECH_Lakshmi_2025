@@ -7,27 +7,29 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Lowyer")
+@Table(name = "Users")
 public class LoyerModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String fname;
-	private String lname;
+	private long id;
+	private String full_name;
 	private String email;
+	private String password;
+	//private String Confirm_password;
 	private String role;
-	private String status;
 	
-	public String getFname() {
-		return fname;
+	
+	public long getId() {
+		return id;
 	}
-	public void setFname(String fname) {
-		this.fname = fname;
+	public void setId(long id) {
+		this.id = id;
 	}
-	public String getLname() {
-		return lname;
+	public String getFull_name() {
+		return full_name;
 	}
-	public void setLname(String lname) {
-		this.lname = lname;
+	public void setFull_name(String full_name) {
+		this.full_name = full_name;
 	}
 	public String getEmail() {
 		return email;
@@ -35,18 +37,31 @@ public class LoyerModel {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+//	public String getConfirm_password() {
+//		return Confirm_password;
+//	}
+//	public void setConfirm_password(String confirm_password) {
+//		Confirm_password = confirm_password;
+//	}
 	public String getRole() {
 		return role;
 	}
 	public void setRole(String role) {
 		this.role = role;
 	}
-	public String getStatus() {
-		return status;
+	@Override
+	public String toString() {
+		return "LoyerModel [id=" + id + ", full_name=" + full_name + ", email=" + email + ", password=" + password
+				+ ", role=" + role + "]";
 	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
+
 	
 	
 

@@ -18,7 +18,6 @@ public class ArryAssignment {
 		System.out.println("the array elements are");
 		for(int j=0;j<array.length;j++){
 		System.out.print(array[j]+" ");
-
 	}
 	sc.close();
 		

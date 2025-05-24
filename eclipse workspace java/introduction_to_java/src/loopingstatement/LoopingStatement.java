@@ -11,9 +11,13 @@ public class LoopingStatement {
 		 * */
 		
 		//for loop
-		int [] array= {1,2,3,4,5};
+		char [] array= {'r','a','k','s','h','a'};
 		for(int i=0 ;i<=4;i++) {
 			System.out.println(array[i]);
+		}
+		String str=new String("vishwa");
+		for (char a=0;a<4;a++) {
+			System.out.println(str.charAt(a));
 		}
 		
 		
